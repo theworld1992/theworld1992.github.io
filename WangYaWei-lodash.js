@@ -23,5 +23,17 @@ compact:function(arr){
     }
     return newarr;
 },
+difference:function(arr,values){
+    var newarr = [];
+    newarr = arr;
+    for( var i =0; i<arr.length; i++){
+        for( var j = 0; j<values.length; j++){
+            if(arr[i] == values[j]){
+                arr.splice(i,1);
+            }
+        }
+    }
+    return newarr;
+},
 
 }
