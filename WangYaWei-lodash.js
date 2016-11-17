@@ -1,8 +1,8 @@
 
 var WangYaWei = {
 chunk:function(arr,m){
-	var newarr = [];
-	var temp = [];
+ var newarr = [];
+ var temp = [];
     for(var i = 0; i< arr.length; i++){
     var j = i % m
     temp.push(arr[i])
@@ -12,7 +12,16 @@ chunk:function(arr,m){
     temp = [];
     }      
   }
-    
     return newarr
-}
+},
+compact:function(arr){
+    var newarr = [];
+    for( var i = 0; i < arr.length; i ++ ){
+        if( arr[i] ){
+            newarr.push(arr[i]);
+        }
+    }
+    return newarr;
+},
+
 }
