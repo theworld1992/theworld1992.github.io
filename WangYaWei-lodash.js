@@ -35,5 +35,22 @@ difference:function(arr,values){
     }
     return newarr;
 },
-
+map:function(arr,fn){
+    var newarr =[] ;
+    for(var i =0; i<arr.length;i++){
+        newarr.push(fn(arr[i],i,arr));
+    }
+    return newarr;
+},
+drop:function(arr,n){
+    var newarr = [];
+    if(n===undefined){
+        n=1;
+    }
+    for(var i =n; i<arr.length;i++){
+        newarr.push(arr[i]);
+        
+    }
+    return newarr;
+},
 }
