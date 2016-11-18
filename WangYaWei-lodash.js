@@ -53,4 +53,14 @@ drop:function(arr,n){
     }
     return newarr;
 },
+dropRight:function(arr,n){
+    var newarr = [];
+    if(n===undefined){
+        n=1;
+    }
+    for(var i = 0; i < (arr.length-n); i++){
+        newarr.push(arr[i]);
+    }
+    return newarr;
+},
 }
