@@ -14,6 +14,7 @@ chunk:function(arr,m){
   }
     return newarr
 },
+
 compact:function(arr){
     var newarr = [];
     for( var i = 0; i < arr.length; i ++ ){
@@ -23,6 +24,7 @@ compact:function(arr){
     }
     return newarr;
 },
+
 difference:function(arr,values){
     var newarr = [];
     newarr = arr;
@@ -35,6 +37,7 @@ difference:function(arr,values){
     }
     return newarr;
 },
+
 map:function(arr,fn){
     var newarr =[] ;
     for(var i =0; i<arr.length;i++){
@@ -42,6 +45,7 @@ map:function(arr,fn){
     }
     return newarr;
 },
+
 drop:function(arr,n){
     var newarr = [];
     if(n===undefined){
@@ -53,6 +57,7 @@ drop:function(arr,n){
     }
     return newarr;
 },
+
 dropRight:function(arr,n){
     var newarr = [];
     if(n===undefined){
@@ -63,4 +68,18 @@ dropRight:function(arr,n){
     }
     return newarr;
 },
+
+fill:function(array,value,star,end){
+    newarr = array;
+    if(star===undefined){
+        star = 0;
+    }
+    if(end===undefined){
+        end=array.length;
+    }
+    for(var i =star; i<end;i++){
+        newarr[i]=value;
+    }
+    return newarr;
+}
 }
