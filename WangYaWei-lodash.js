@@ -166,6 +166,36 @@ slice:function(start,end){
     return result
 },
 
+head: function(arr) {
+    if (arr.length === 0) {
+      return undefined;
+    }
+    return arr[0];
+  },
 
+fromPairs: function(arr) {
+    var newobj = {};
+    for (var i = 0; i < arr.length; i++) {
+      newobj[arr[i][0]] = arr[i][1];
+      //将数组的对应赋予对象的属性与值
+    }
+    return newobj;
+  },
+
+initial: function(arr) {
+    var newarr = [];
+    arr.pop();
+    newarr = arr;
+    return newarr;
+    //将规定的数组最后一位删除
+  },
+
+initial: function(arr) {
+    var newarr = [];
+    arr.pop();
+    newarr = arr;
+    return newarr;
+    //将规定的数组最后一位删除
+  },
 
 }
